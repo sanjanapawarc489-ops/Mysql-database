@@ -48,7 +48,7 @@ async function initDb() {
 
 initDb();
 
-app.post('/register', async (req, res) => {
+app.post('/api/register', async (req, res) => {
     try {
         const { uname, uemail, phon, password } = req.body;
 
@@ -77,7 +77,7 @@ app.post('/register', async (req, res) => {
     }
 });
 
-app.post('/login', async (req, res) => {
+app.post('/api/login', async (req, res) => {
     try {
         const { uname, password } = req.body;
 
@@ -115,7 +115,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.get('/users', async (req, res) => {
+app.get('/api/users', async (req, res) => {
     try {
         if (pool) {
             const [rows] = await pool.query('SELECT * FROM User');
@@ -129,6 +129,10 @@ app.get('/users', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
+
+module.exports = app;

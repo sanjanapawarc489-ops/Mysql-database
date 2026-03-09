@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 import axios from 'axios';
 import './App.css';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = import.meta.env.PROD ? '' : 'http://localhost:5000';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ function Register() {
       return;
     }
     try {
-      const response = await axios.post(`${API_URL}/register`, {
+      const response = await axios.post(`${API_URL}/api/register`, {
         uname: formData.uname,
         uemail: formData.uemail,
         phon: formData.phon,
@@ -84,7 +84,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${API_URL}/login`, formData);
+      const response = await axios.post(`${API_URL}/api/login`, formData);
       if (response.status === 200) {
         alert("Login successful");
         navigate('/dashboard');
@@ -134,7 +134,7 @@ function DatabasePage() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get(`${API_URL}/users`);
+        const response = await axios.get(`${API_URL}/api/users`);
         setUsers(response.data);
       } catch (error) {
         console.error("Failed to fetch users", error);
