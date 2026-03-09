@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  border-radius: 8px;
+  padding: 30px;
+  width: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.signup-container h2 {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.login-container {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.signup-container .input-group input {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+}
+
+.login-container .input-group input {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+}
+
+.signup-btn {
+  padding: 10px 20px;
+  background-color: #000000;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-btn {
+  padding: 10px 20px;
+  background-color: #000000;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.switch-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.switch-link a {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dashboard-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.welcome-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+}
+
+.welcome-box h1 {
+  color: #333;
+  margin: 0;
+}
+
+.database-box {
+  flex: 2;
+  border-radius: 8px;
+}
+
+.db-inner {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 50px 20px 20px 20px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.db-inner th {
+  color: #000000;
+}
+
+.db-table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.db-table td,
+.db-table th {
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.db-table th {
+  font-weight: normal;
+  font-weight: bold;
+}
+
+.db-table td {
+  color: #000000;
+}

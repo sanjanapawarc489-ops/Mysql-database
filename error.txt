@@ -1,0 +1,32 @@
+remote: error: GH013: Repository rule violations found for refs/heads/main.        
+remote: 
+remote: - GITHUB PUSH PROTECTION        
+remote:   —————————————————————————————————————————        
+remote:     Resolve the following violations before pushing again        
+remote: 
+remote:     - Push cannot contain secrets        
+remote: 
+remote:             
+remote:      (?) Learn how to resolve a blocked push        
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push        
+remote:             
+remote:             
+remote:       —— Aiven Service Password ————————————————————————————        
+remote:        locations:        
+remote:          - commit: cf78f3b3efc9f12db0e57a11d473ba1e94be4bd0        
+remote:            path: backend/index.js:23        
+remote:          - commit: cf78f3b3efc9f12db0e57a11d473ba1e94be4bd0        
+remote:            path: frontend/src/App.jsx:13        
+remote:          - commit: cf78f3b3efc9f12db0e57a11d473ba1e94be4bd0        
+remote:            path: frontend/src/App.jsx:14        
+remote:          - commit: cf78f3b3efc9f12db0e57a11d473ba1e94be4bd0        
+remote:            path: frontend/src/App.jsx:76        
+remote:             
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.        
+remote:        https://github.com/sanjanapawarc489-ops/Mysql-database/security/secret-scanning/unblock-secret/3AhA94tcl68lo6aw8M4iW29Cc3a        
+remote:             
+remote: 
+remote: 
+To https://github.com/sanjanapawarc489-ops/Mysql-database.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/sanjanapawarc489-ops/Mysql-database.git'
